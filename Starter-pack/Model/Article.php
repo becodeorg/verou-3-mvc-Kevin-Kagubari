@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 class Article
 {
-    public string $title;
-    public ?string $description;
-    public ?string $publishDate;
+    public $title;
+    public $description;
+    public $publishDate;
 
     public function __construct(string $title, ?string $description, ?string $publishDate)
     {

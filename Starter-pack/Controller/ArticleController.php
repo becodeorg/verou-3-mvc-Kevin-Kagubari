@@ -17,6 +17,21 @@ class ArticleController
     private function getArticles()
     {
         // TODO: prepare the database connection
+
+        $host = 'localhost';
+        $user = 'root';
+        $pwd = '';
+        $dbName = 'MVC';
+
+        function connect (){
+            $dsn = 'mysql:host=' . $this->host . ';dbName=' . $this->dbName;
+            $pdo = new PDO($dsn, $this->user, $this->pwd);
+            $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            return $pdo; 
+        }
+
+        
+
         // Note: you might want to use a re-usable databaseManager class - the choice is yours
         // TODO: fetch all articles as $rawArticles (as a simple array)
         $rawArticles = [];
