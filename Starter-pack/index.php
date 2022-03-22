@@ -32,3 +32,5 @@ switch ($page) {
         (new HomepageController())->index();
         break;
 }
+
+var_dump($_GET);
