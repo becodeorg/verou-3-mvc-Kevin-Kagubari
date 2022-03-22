@@ -20,7 +20,7 @@ class ArticleController
 
         $host = 'localhost';
         $user = 'root';
-        $pwd = '';
+        $pwd = ''; 
         $dbName = 'MVC';
 
         function connect (){
